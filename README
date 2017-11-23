@@ -1,1 +1,8 @@
 Automake hello world
+autoreconf -i  --- ./configure  0---- make --- make install--- make uninstall ---make dist---make distcheck
+
+$t="$(mktemp -d)"
+DESTDIR="$t" make install
+
+$find "$t"
+
